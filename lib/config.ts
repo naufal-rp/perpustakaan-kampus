@@ -15,6 +15,10 @@ const config = {
       qstashUrl: process.env.QSTASH_URL!,
       qstashToken: process.env.QSTASH_TOKEN!,
     },
+    nodemailer:{
+      emailUser: process.env.EMAIL_USER!,
+      emailPass: process.env.EMAIL_PASS!
+    }
   },
 };
 

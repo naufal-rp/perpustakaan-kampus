@@ -13,7 +13,6 @@ export const sendEmail = async ({ email, subject, message }: { email: string; su
   await client.publishJSON({
     url: `${config.env.apiEndpoint}/api/send-email`,
     body: {
-      from: "Permpus <hello.permpus.com>",
       to: [email],
       subject,
       html: message,
