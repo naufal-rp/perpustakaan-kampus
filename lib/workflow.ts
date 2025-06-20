@@ -11,7 +11,7 @@ const client = new Client({ token: config.env.upstash.qstashToken });
 
 export const sendEmail = async ({ email, subject, message }: { email: string; subject: string; message: string }) => {
   await client.publishJSON({
-    url: `${config.env.prodApiEndpoint}/api/send-email`,
+    url: `${config.env.apiEndpoint}/api/send-email`,
     body: {
       from: "Permpus <hello.permpus.com>",
       to: [email],
